@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zoo>
+
+    <Animals>
+        
+        <Mammals>
+            <Primates>
+                <Monkey name="Charlie" gender="male" age="27" food="bananas" />
+                <Gorilla name="Kong" gender="male" age="15" food="fruit" /> 
+                <Chimp name="Caesar" gender="male" age="10" food="nuts" /> 
+            </Primates>
+
+            <Canines>
+                <Dog name="Johnny" gender="male" age="3" food="bones" />
+                <Fox name="Sunny" gender="male" age="12" food="meat" />
+                <Jackal name="Jack" gender="male" age="5" food="meat" /> 
+            </Canines>
+
+            <Rodents>
+                <Rabbit name="Bugs" gender="male" age="2" food="carrot" />
+                <Hamster name="Goldy" gender="female" age="1" food="seeds" />
+                <Mouse name="Mickey" gender="male" age="1" food="cheese" />
+            </Rodents>
+        </Mammals>
+        
+        <Carnivores>
+            <BigCats>
+                <Lion name="Simba" gender="male" age="12" food="meat" />
+                <Tiger name="Shira" gender="female" age="10" food="meat" />
+                <Leopard name="Shadow" gender="male" age="9" food="meat" />
+            </BigCats>
+
+            <Canines>
+                <Wolf name="Ghost" gender="male" age="7" food="meat" />
+                <Fox name="Ruby" gender="female" age="5" food="meat" />
+                <Jackal name="Arlo" gender="male" age="6" food="meat" />
+            </Canines>
+
+            <Bears>
+                <BrownBear name="Bruno" gender="male" age="14" food="fish" />
+                <PolarBear name="Snow" gender="female" age="11" food="meat" />
+                <Panda name="Po" gender="male" age="8" food="bamboo" />
+            </Bears>
+        </Carnivores>
+
+
+        <SeaAnimals>
+            <MarineMammals>
+                <Dolphin name="Flipper" gender="male" age="15" food="fish" />
+                <Whale name="Bluey" gender="female" age="25" food="krill" />
+                <Seal name="Splash" gender="male" age="10" food="fish" />
+            </MarineMammals>
+
+            <MarineReptiles>
+                <SeaTurtle name="Shelly" gender="female" age="20" food="seaweed" />
+                <Crocodile name="Snappy" gender="male" age="18" food="fish" />
+                <MarineIguana name="Iggy" gender="male" age="7" food="algae" />
+            </MarineReptiles>
+
+            <Fish>
+                <Shark name="Jaws" gender="male" age="13" food="fish" />
+                <Clownfish name="Nemo" gender="male" age="3" food="plankton" />
+                <Tuna name="Blue" gender="female" age="6" food="smallfish" />
+            </Fish>
+        </SeaAnimals>
+
+
+        <Birds>
+            <Parrots>
+                <Parrot name="Polly" gender="female" age="4" food="fruits" />
+                <Macaw name="Rio" gender="male" age="5" food="nuts" />
+                <Cockatoo name="Snowy" gender="female" age="6" food="seeds" />
+            </Parrots>
+
+            <Raptors>
+                <Eagle name="Aero" gender="male" age="9" food="meat" />
+                <Falcon name="Flash" gender="female" age="7" food="insects" />
+                <Vulture name="Bones" gender="male" age="8" food="carrion" />
+            </Raptors>
+
+            <WaterBirds>
+                <Swan name="Whitey" gender="female" age="6" food="plants" />
+                <Duck name="Quacky" gender="male" age="3" food="grains" />
+                <Penguin name="Pingu" gender="male" age="5" food="fish" />
+            </WaterBirds>
+        </Birds>
+
+    </Animals>
+
+
+    <Employees>
+        
+        <Feeding>
+            <Employee1 name="Razi" seniority="4" age="24" salary="7500" />
+            <Employee2 name="Avi" seniority="5" age="23" salary="8500" />
+            <Employee3 name="Idan" seniority="2" age="30" salary="9000" />
+            <Employee4 name="Noam" seniority="3" age="25" salary="6000" />
+            <Employee5 name="Noa" seniority="8" age="29" salary="10500" />
+        </Feeding>
+
+        <Security>
+            <Employee1 name="Itay" seniority="8" age="33" salary="1300" />
+            <Employee2 name="Shir" seniority="10" age="35" salary="14500" />
+            <Employee3 name="Gal" seniority="4" age="26" salary="10000" />
+            <Employee4 name="Amit" seniority="6" age="29" salary="11500" />
+            <Employee5 name="Miri" seniority="11" age="35" salary="15000" />
+        </Security>
+
+        <Training>
+            <Employee1 name="Sophie" seniority="24" age="52" salary="13500" />
+            <Employee2 name="Hadar" seniority="3" age="24" salary="8500" />
+            <Employee3 name="Shani" seniority="13" age="38" salary="10500" />
+            <Employee4 name="Lior" seniority="6" age="29" salary="9500" />
+            <Employee5 name="Eli" seniority="10" age="41" salary="10500" />
+        </Training>
+
+        <Sales>
+            <Employee1 name="Liel" seniority="15" age="35" salary="16500" />
+            <Employee2 name="Maor" seniority="10" age="31" salary="13500" />
+            <Employee3 name="Yarin" seniority="4" age="24" salary="10000" />
+            <Employee4 name="Daniel" seniority="6" age="27" salary="12500" />
+            <Employee5 name="Ilai" seniority="2" age="23" salary="10000" />
+        </Sales>
+
+    </Employees>
+    
+</zoo>

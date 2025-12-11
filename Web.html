@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Zoo Management</title>
+<style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        
+        #mainContainer {
+            display: flex; 
+            height: 80vh;
+            border: 1px solid #ccc;
+        }
+
+        #sidebar {
+            width: 30%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-left: 1px solid #ddd;
+            overflow-y: auto; 
+        }
+
+        #contentArea {
+            width: 70%;
+            padding: 20px;
+        }
+
+        .category-btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Zoo Management System</h1>
+
+<div id="mainContainer">
+  
+  <div id="sidebar">
+    <h3>Menu</h3>
+    <div id="menuList"></div>
+  </div>
+
+  <div id="contentArea">
+    <h3>Details</h3>
+    <div id="detailsView">Select an item from the menu</div>
+  </div>
+
+</div>
+
+
+<script src="data.js"></script>
+
+<script>
+    
+if (typeof zooXML !== 'undefined') {
+    
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(zooXML.trim(), "text/xml");
+     
+  function renderMenu(parentElement) {
+        const menuContainer = document.getElementById('menuList');
+        
+        menuContainer.innerHTML = '';
+
+        if (parentElement) {
+            const elements = Array.from(parentElement.children);
+            
+            if (parentElement.parentElement) {
+                const backBtn = document.createElement('button');
+                backBtn.textContent = "Back"; 
+                backBtn.className = 'category-btn';
+
+                backBtn.addEventListener("click", function() {
+                    console.log("Going back to parent");
+                    renderMenu(parentElement.parentElement);
+                });
+                
+                menuContainer.appendChild(backBtn);
+            }
+
+            elements.forEach(el => {
+                const btn = document.createElement('button');
+                btn.textContent = el.tagName;
+                btn.className = 'category-btn';
+                
+                btn.addEventListener("click", function() {
+                  if (el.children.length > 0){
+                    console.log(`Navigating to: ${el.tagName}`);
+                    renderMenu(el);
+                  }  
+                  else{
+                    console.log(`Show details for: ${el.tagName}`);
+                    renderDetails(el);
+                  }
+                });
+
+                menuContainer.appendChild(btn);
+            });
+        }
+    }
+   
+    renderMenu(xmlDoc.documentElement);
+    
+    function renderDetails(el){
+      const detailsContainer = document.getElementById('detailsView');
+
+      detailsContainer.innerHTML = '';
+
+      const animalName = el.getAttribute("name");
+      const header2 = document.createElement('h2');
+      header2.textContent = animalName;
+      detailsContainer.appendChild(header2);
+
+      const attribute = Array.from(el.attributes)
+      
+      attribute.forEach(atrr =>{
+        const p = document.createElement('p');
+        p.textContent = `${atrr.name}: ${atrr.value}`;
+        detailsContainer.appendChild(p);
+
+      })
+    }
+} 
+
+else {
+    console.error("Error: zooXML is missing. Check data.js");
+}
+    
+
+</script>
+
+</body>
+</html>
